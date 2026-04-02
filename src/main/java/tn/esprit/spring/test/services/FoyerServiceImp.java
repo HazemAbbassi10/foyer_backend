@@ -43,16 +43,14 @@ public class FoyerServiceImp implements IFoyerService {
 
     @Override
     public Foyer ajouterFoyerEtAffecterAUniversite(Foyer foyer, long idUniversite) {
-        // Step 1: add the Foyer with its Blocs
+
         for (Bloc bloc : foyer.blocs) {
             bloc.setFoyer(foyer);
         }
         Foyer savedFoyer = foyerRepository.save(foyer);
 
-        // Step 2: get the Universite
         Universite universite = universiteRepository.findById(idUniversite).get();
 
-        // Step 3: assign and save
         universite.setFoyer(savedFoyer);
         universiteRepository.save(universite);
 

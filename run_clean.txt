@@ -1,0 +1,127 @@
+﻿
+  2026-04-02T14:19:14.399+
+01:00  INFO 26212 --- [   
+        main] j.LocalConta
+inerEntityManagerFactoryBe
+an : Initialized JPA 
+EntityManagerFactory for 
+persistence unit 'default'
+  2026-04-02T14:19:14.711+
+01:00  WARN 26212 --- [   
+        main] JpaBaseConfi
+guration$JpaWebConfigurati
+on : 
+spring.jpa.open-in-view 
+is enabled by default. 
+Therefore, database 
+queries may be performed 
+during view rendering. 
+Explicitly configure 
+spring.jpa.open-in-view 
+to disable this warning
+> 2026-04-02T14:19:14.749+
+01:00  INFO 26212 --- [   
+        main] o.s.v.b.Opti
+onalValidatorFactoryBean  
+   : Failed to set up a 
+Bean Validation provider: 
+jakarta.validation.NoProvi
+derFoundException: Unable 
+to create a 
+Configuration, because no 
+Jakarta Bean Validation 
+provider could be found. 
+Add a provider like 
+Hibernate Validator (RI) 
+to your classpath.
+> 2026-04-02T14:19:15.016+
+01:00  WARN 26212 --- [   
+        main] ConfigServle
+tWebServerApplicationConte
+xt : Exception 
+encountered during 
+context initialization - 
+cancelling refresh 
+attempt: org.springframewo
+rk.context.ApplicationCont
+extException: Failed to 
+start bean 
+'webServerStartStop'
+  2026-04-02T14:19:15.017+
+01:00  INFO 26212 --- [   
+        main] j.LocalConta
+inerEntityManagerFactoryBe
+an : Closing JPA 
+EntityManagerFactory for 
+persistence unit 'default'
+  2026-04-02T14:19:15.025+
+01:00  INFO 26212 --- [   
+        main] com.zaxxer.h
+ikari.HikariDataSource    
+   : HikariPool-1 - 
+Shutdown initiated...
+  2026-04-02T14:19:15.029+
+01:00  INFO 26212 --- [   
+        main] com.zaxxer.h
+ikari.HikariDataSource    
+   : HikariPool-1 - 
+Shutdown completed.
+  2026-04-02T14:19:15.037+
+01:00  INFO 26212 --- [   
+        main] .s.b.a.l.Con
+ditionEvaluationReportLogg
+er : 
+  
+> Error starting 
+ApplicationContext. To 
+display the condition 
+evaluation report re-run 
+your application with 
+'debug' enabled.
+> 2026-04-02T14:19:15.048+
+01:00 ERROR 26212 --- [   
+        main] o.s.b.d.Logg
+ingFailureAnalysisReporter
+   : 
+  
+  ************************
+***
+  APPLICATION FAILED TO 
+START
+  ************************
+***
+  
+  [INFO] Finished at: 
+2026-04-02T14:19:15+01:00
+  [INFO] -----------------
+--------------------------
+--------------------------
+---
+> [ERROR] Failed to 
+execute goal org.springfra
+mework.boot:spring-boot-ma
+ven-plugin:3.5.10:run 
+(default-cli) on project 
+test: Process terminated 
+with exit code: 1 -> 
+[Help 1]
+> [ERROR] 
+> [ERROR] To see the full 
+stack trace of the 
+errors, re-run Maven with 
+the -e switch.
+> [ERROR] Re-run Maven 
+using the -X switch to 
+enable full debug logging.
+> [ERROR] 
+> [ERROR] For more 
+information about the 
+errors and possible 
+solutions, please read 
+the following articles:
+> [ERROR] [Help 1] http://
+cwiki.apache.org/confluenc
+e/display/MAVEN/MojoExecut
+ionException
+
+

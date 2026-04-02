@@ -1,13 +1,15 @@
 package tn.esprit.spring.test.entities;
 
 import jakarta.persistence.*;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import java.util.List;
 
 @Entity
 public class Bloc {
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public long idBloc;
     public String nomBloc;
 
@@ -53,12 +55,12 @@ public class Bloc {
 
     public long capaciteBloc;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy="bloc")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "bloc")
+    @JsonManagedReference
     public List<Chambre> chambres;
 
     @ManyToOne
+    @JsonBackReference
     public Foyer foyer;
-
-
 
 }
