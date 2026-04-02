@@ -1,0 +1,53 @@
+﻿[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< tn.esprit.spring:test >------------------------
+[INFO] Building test 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ test ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ test ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 32 source files with javac [debug parameters release 17] to target\classes
+[INFO] Annotation processing is enabled because one or more processors were found
+  on the class path. A future release of javac may disable annotation processing
+  unless at least one processor is specified by name (-processor), or a search
+  path is specified (--processor-path, --processor-module-path), or annotation
+  processing is enabled explicitly (-proc:only, -proc:full).
+  Use -Xlint:-options to suppress this message.
+  Use -proc:none to disable annotation processing.
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /D:/spring projects/test/src/main/java/tn/esprit/spring/test/services/FoyerServiceImp.java:[47,18] cannot find symbol
+  symbol:   method getBlocs()
+  location: variable foyer of type tn.esprit.spring.test.entities.Foyer
+[ERROR] /D:/spring projects/test/src/main/java/tn/esprit/spring/test/services/FoyerServiceImp.java:[48,32] cannot find symbol
+  symbol:   method getBlocs()
+  location: variable foyer of type tn.esprit.spring.test.entities.Foyer
+[INFO] 2 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.926 s
+[INFO] Finished at: 2026-04-02T13:58:00+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.14.1:compile (default-compile) on project test: Compilation failure: Compilation failure: 
+[ERROR] /D:/spring projects/test/src/main/java/tn/esprit/spring/test/services/FoyerServiceImp.java:[47,18] cannot find symbol
+[ERROR]   symbol:   method getBlocs()
+[ERROR]   location: variable foyer of type tn.esprit.spring.test.entities.Foyer
+[ERROR] /D:/spring projects/test/src/main/java/tn/esprit/spring/test/services/FoyerServiceImp.java:[48,32] cannot find symbol
+[ERROR]   symbol:   method getBlocs()
+[ERROR]   location: variable foyer of type tn.esprit.spring.test.entities.Foyer
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
