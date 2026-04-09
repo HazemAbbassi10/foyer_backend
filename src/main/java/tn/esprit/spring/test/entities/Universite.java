@@ -13,7 +13,7 @@ public class Universite {
     public String address;
 
     @OneToOne
-    @JsonManagedReference
+    @JsonManagedReference("foyer-universite")
     public Foyer foyer;
 
     public Foyer getFoyer() {

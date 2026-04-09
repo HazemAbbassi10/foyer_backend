@@ -60,6 +60,6 @@ public class Chambre {
     public List<Reservation> reservations;
 
     @ManyToOne
-    @JsonBackReference
+    @JsonBackReference("bloc-chambre")
     public Bloc bloc;
 }

@@ -15,11 +15,11 @@ public class Foyer {
     public long capacityFoyer;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "foyer")
-    @JsonManagedReference
+    @JsonManagedReference("foyer-bloc")
     public List<Bloc> blocs;
 
     @OneToOne(mappedBy = "foyer")
-    @JsonBackReference
+    @JsonBackReference("foyer-universite")
     public Universite universite;
 
 }

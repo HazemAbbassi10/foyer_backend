@@ -1,8 +1,7 @@
 package tn.esprit.spring.test.entities;
 
 import jakarta.persistence.*;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.fasterxml.jackson.annotation.JsonBackReference;
+
 
 import java.util.Date;
 import java.util.List;
@@ -20,6 +19,5 @@ public class Etudiant {
     public Date dateNaissance;
 
     @ManyToMany(cascade = CascadeType.ALL)
-    @JsonManagedReference
     public List<Reservation> reservations;
 }

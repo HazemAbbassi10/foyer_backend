@@ -3,6 +3,7 @@ package tn.esprit.spring.test.control;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.spring.test.entities.Chambre;
+import tn.esprit.spring.test.entities.TypeChambre;
 import tn.esprit.spring.test.services.IChambreService;
 
 import java.util.List;
@@ -36,5 +37,15 @@ public class ChambreRestController {
     @PutMapping("/modify-chambre")
     public Chambre modifyChambre(@RequestBody Chambre c) {
         return chambreService.modifyChambre(c);
+    }
+
+    @GetMapping("/chambres-par-universite/{nomUniversite}")
+    public List<Chambre> getChambresParNomUniversite(@PathVariable("nomUniversite") String nomUniversite) {
+        return chambreService.getChambresParNomUniversite(nomUniversite);
+    }
+
+    @GetMapping("/chambres-par-bloc-et-type/{idBloc}/{typeC}")
+    public List<Chambre> getChambresParBlocEtType(@PathVariable("idBloc") long idBloc, @PathVariable("typeC") TypeChambre typeC) {
+        return chambreService.getChambresParBlocEtType(idBloc, typeC);
     }
 }

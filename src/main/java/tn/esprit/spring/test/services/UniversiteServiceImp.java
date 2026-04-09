@@ -42,11 +42,11 @@ public class UniversiteServiceImp implements IUniversiteService {
 
     @Override
     public Universite affecterFoyerAUniversite(long idFoyer, String nomUniversite) {
-        // Step 1: get the Foyer
+      
         Foyer foyer = foyerRepository.findById(idFoyer).get();
-        // Step 2: get the Universite
+
         Universite universite = universiteRepository.findByNomUniversite(nomUniversite);
-        // Step 3: assign and save
+
         universite.setFoyer(foyer);
         return universiteRepository.save(universite);
     }

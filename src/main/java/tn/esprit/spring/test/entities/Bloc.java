@@ -56,11 +56,11 @@ public class Bloc {
     public long capaciteBloc;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "bloc")
-    @JsonManagedReference
+    @JsonManagedReference("bloc-chambre")
     public List<Chambre> chambres;
 
     @ManyToOne
-    @JsonBackReference
+    @JsonBackReference("foyer-bloc")
     public Foyer foyer;
 
 }
