@@ -1,6 +1,7 @@
 package tn.esprit.spring.test.services;
 
 import tn.esprit.spring.test.entities.Reservation;
+import java.util.Date;
 
 import java.util.List;
 
@@ -14,4 +15,6 @@ public interface IReservationService {
     void removeReservation(String reservationId);
 
     Reservation modifyReservation(Reservation reservation);
+
+    List<Reservation> getReservationParAnneeUniversitaireEtNomUniversite(Date anneeUniversite, String nomUniversite);
 }

@@ -48,4 +48,9 @@ public class ChambreRestController {
     public List<Chambre> getChambresParBlocEtType(@PathVariable("idBloc") long idBloc, @PathVariable("typeC") TypeChambre typeC) {
         return chambreService.getChambresParBlocEtType(idBloc, typeC);
     }
+
+    @GetMapping("/non-reservees/{nomUniversite}/{type}")
+    public List<Chambre> getChambresNonReserve(@PathVariable("nomUniversite") String nomUniversite, @PathVariable("type") TypeChambre type) {
+        return chambreService.getChambresNonReserveParNomUniversiteEtTypeChambre(nomUniversite, type);
+    }
 }

@@ -3,6 +3,8 @@ package tn.esprit.spring.test.control;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.spring.test.entities.Reservation;
+import org.springframework.format.annotation.DateTimeFormat;
+import java.util.Date;
 import tn.esprit.spring.test.services.IReservationService;
 
 import java.util.List;
@@ -36,5 +38,12 @@ public class ReservationRestController {
     @PutMapping("/modify-reservation")
     public Reservation modifyReservation(@RequestBody Reservation r) {
         return reservationService.modifyReservation(r);
+    }
+
+    @GetMapping("/reservations-par-annee-universite/{nomUniversite}")
+    public List<Reservation> getReservationParAnneeUniversitaireEtNomUniversite(
+            @RequestParam("anneeUniversite") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date anneeUniversite, 
+            @PathVariable("nomUniversite") String nomUniversite) {
+        return reservationService.getReservationParAnneeUniversitaireEtNomUniversite(anneeUniversite, nomUniversite);
     }
 }

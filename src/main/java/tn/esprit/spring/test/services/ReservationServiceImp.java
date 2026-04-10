@@ -1,16 +1,19 @@
 package tn.esprit.spring.test.services;
 
-import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+
+import lombok.AllArgsConstructor;
 import tn.esprit.spring.test.entities.Reservation;
 import tn.esprit.spring.test.repositories.ReservationRepository;
-
+import tn.esprit.spring.test.repositories.UniversiteRepository;
+import java.util.Date;
 import java.util.List;
 
 @Service
 @AllArgsConstructor
 public class ReservationServiceImp implements IReservationService {
     ReservationRepository reservationRepository;
+    UniversiteRepository universiteRepository;
 
     @Override
     public List<Reservation> retrieveAllReservations() {
@@ -35,5 +38,11 @@ public class ReservationServiceImp implements IReservationService {
     @Override
     public Reservation modifyReservation(Reservation reservation) {
         return reservationRepository.save(reservation);
+    }
+
+    @Override
+    public List<Reservation> getReservationParAnneeUniversitaireEtNomUniversite(Date anneeUniversite, String nomUniversite) {
+        // We use the incredibly powerful JPQL query to instantly fetch what we need without loops!
+        return reservationRepository.getReservationParAnneeUniversitaireEtNomUniversiteJPQL(anneeUniversite, nomUniversite);
     }
 }
