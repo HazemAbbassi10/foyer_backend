@@ -42,7 +42,6 @@ public class ReservationServiceImp implements IReservationService {
 
     @Override
     public List<Reservation> getReservationParAnneeUniversitaireEtNomUniversite(Date anneeUniversite, String nomUniversite) {
-        // We use the incredibly powerful JPQL query to instantly fetch what we need without loops!
         return reservationRepository.getReservationParAnneeUniversitaireEtNomUniversiteJPQL(anneeUniversite, nomUniversite);
     }
 }

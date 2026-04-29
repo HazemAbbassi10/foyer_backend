@@ -1,7 +1,6 @@
 package tn.esprit.spring.test.entities;
 
 import jakarta.persistence.*;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import java.util.List;
